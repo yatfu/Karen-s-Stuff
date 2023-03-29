@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="search.js"></script>
+    <script src="ticket.js" type="module" defer></script>
   </head>
   <body>
     <div class="container">
       <h2>Check In</h2>
-      <input type="text" class="input" placeholder="Seat Number">
-      <input type="submit" onclick='onSubmit()'>
+      <input type="text" class="input" maxlength="4" placeholder="Seat Number" id="signin-text-input">
+      <input type="submit" id="signin-button">
     </div>
   </body>
 </html>
