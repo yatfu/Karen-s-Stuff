@@ -21,7 +21,6 @@ const getTicketFromCode = (code) => {
   for (let i = 0; i < data.length; i++) {
     if (data[i].confirmationCode.toLowerCase() === code.toLowerCase()) return data[i] // ignores caps
   }
-  console.error('Ticket not found :(')
   return null
 } 
 
