@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <div class="container">
-      <h1 id="welcome-message">WELCUM</h1>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Patua+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <button id="back-to-signin-button">←</button>
+  <div class="container">
+    <div>
+      <div>
+        <h2><span id='airline-message'></span> | <span id='seat-message'></span></h2>
+        <h1 id="welcome-message"></h1>
+        <div class="inline">
+          <button><p>enjoy in-flight entertainment</p></button>
+          <button><p>read project documentation</p></button>
+        </div>
+      </div>
     </div>
     <script>
-      document.getElementById('welcome-message').innerHTML = 'WELCUM ' + localStorage.getItem('guestName')
+      document.querySelector('#welcome-message').innerHTML = 'Aloha, ' + localStorage.getItem('guestName') + '!'
+      document.querySelector('#airline-message').innerHTML = localStorage.getItem('airlineName').toUpperCase()
+      document.querySelector('#seat-message').innerHTML = 'SEAT ' + localStorage.getItem('seatNumber')
+      document.querySelector('#back-to-signin-button').addEventListener('click', () => window.location.href = './index.html')
     </script>
-  </body>
+  </div>
+</body>
+
 </html>
