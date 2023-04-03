@@ -72,10 +72,6 @@ input:focus {
   color: var(--red);
 }
 
-#signin-text-input {
-  font-size: 0.6rem;
-}
-
 #signin-button, #back-to-signin-button {
   height: 10%;
   width: 10%;
