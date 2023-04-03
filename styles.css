@@ -1,0 +1,97 @@
+/** DISCLAIMER: I edited the letter spacing of the welcome message */
+
+:root { 
+  --brown: rgba(86, 75, 71, 255);
+  --red: rgba(200, 0, 0, 255);
+}
+
+*, *::before, *::after {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  color: var(--brown);
+  /** DEBUG
+  border: 1px dotted gray; 
+  */
+  border: 1px dotted gray; 
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/** ELEMENT QUERY */
+
+h1 {font-size: 2rem;}
+h2, span {font-size: 1rem;}
+p {font-size: 0.5rem;}
+
+button {
+  padding: 0.3rem;
+  border: 1px var(--brown) solid;
+  border-radius: 100rem;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  border-bottom: 0.2px var(--brown) solid;
+}
+
+input:focus {
+  outline: none;
+}
+
+/** CLASS QUERY */
+
+.container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container * {
+  text-align: center;
+}
+
+/** ID QUERY */
+
+
+#back-to-signin-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#error-message {
+  color: var(--red);
+}
+
+#signin-text-input {
+  font-size: 0.6rem;
+}
+
+#signin-button, #back-to-signin-button {
+  height: 10%;
+  width: 10%;
+  font-size: 1rem;
+  border: none;
+}
+
+#signin-button {
+  padding: 0;
+  border: 1px var(--brown) solid;
+  border-radius: 100rem;
+  height: 1rem;
+}
+
+#welcome-message {
+  font-family: 'Patua One', cursive;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
